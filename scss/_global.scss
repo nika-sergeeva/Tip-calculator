@@ -1,0 +1,49 @@
+html,
+body {
+	height: 100%;
+}
+
+body{
+	background-color: hsl(185, 41%, 84%);
+	font-family: 'Space Mono', monospace;
+	font-size: 24px;
+	min-width: 300px;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+input{
+	border: none;
+	background-color: $light-gray;
+	border-radius: 5px;
+	text-align: right;
+	width: 100%;
+}
+
+input:focus{
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button{
+	border-color: transparent;
+	cursor: pointer;
+}
+
+

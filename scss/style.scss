@@ -1,0 +1,196 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 85px;
+    padding-top: 5rem;
+    span{
+        color: $dark-green;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 7px;
+    }
+}
+
+.calc-body{
+    display: flex;
+    flex-direction: row;
+    background-color: $white;
+    border-radius: 30px;
+    gap: 20px;
+    padding: 30px;
+}
+    .calc-count{
+        display: flex;
+        flex-direction: column;
+        &__heading{
+            font-size: 15px;
+            color: $dark-gray;
+        }
+        &__bill{
+            padding-bottom: 30px;
+        }
+        &__tips{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__tip{
+            display: grid;
+            grid-template-columns: repeat(3, 104px);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+            #custom::-webkit-input-placeholder {
+                text-align: center;
+            }
+            #custom:-moz-placeholder {
+                text-align: center;
+            }
+            #custom:focus{
+                outline: none;
+                border: 2px solid $border;
+            }
+            &-btn{
+                background-color: $dark-green;
+                border-radius: 5px;
+                color: $light-gray;
+                transition: all .5s;
+                &:hover{
+                    background-color: #26c0ab;
+                    color: $dark-green;
+                }
+            }
+            &-btn.active{
+                background-color: #26c0ab;
+                color: #00494d;
+            }
+        }
+
+        &__tip-box{
+            position: relative;
+              input[type=radio] {
+                -webkit-appearance: none;
+                background-color: #00494d;
+                border-radius: 0.4rem;
+                cursor: pointer;
+                height: 100%;
+                padding: 0.5em;
+                width: 100%;
+            }
+            
+            input[type=radio]:checked {
+                background-color: #26c0ab;
+                color: #00494d;
+            }
+            label {
+                color: #fff;
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-weight: 700;
+                left: 50%;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        &__people{
+            padding-top: 30px; 
+        }
+        &__warning{
+            position: absolute;
+            bottom: 36px;
+            right: 7px;
+            color: red;
+            font-size: initial;
+           &.hidden{
+            display: none;
+           }
+        }
+        &__input-box{
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            position: relative;
+            padding-top: 5px;
+        }
+        label{
+            position: absolute;
+            left: 10px;
+        }
+        #bill,
+        #people{
+            width: 100%;
+	        background-color: $light-gray;
+        }
+
+    }
+
+
+    .calc-output{
+        border-radius: 20px;
+        background-color: $dark-green;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 30px;
+        &__display{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 24px;
+        }
+        &__display-headings{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            padding-top: 10px;
+        }
+        &__display-box{
+            display: flex;
+            flex-direction: column;
+        }
+        &__display-big{
+            font-size: 15px;
+            font-weight: 700;
+            color: $light-gray;
+        }
+        &__display-small{
+            font-size: 10px;
+            font-weight: 400;
+            color: $light-grayish;
+        }
+        &__display-output{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            font-size: 30px;
+            font-weight: 700;
+            color: #26c0ab;
+            gap: 20px;
+        }
+        &__btn{
+            border-color: transparent;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 3px;
+            color: #00494d;
+            background-color: #26c0ab;
+            padding: 4px 0;
+        }
+    }
+
+
+
+
+   
+@import "media";
